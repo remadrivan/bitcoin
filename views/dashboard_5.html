@@ -1,0 +1,45 @@
+<div class="wrapper wrapper-content p-xl">
+<div class="animated fadeInRight">
+
+<div class="row">
+
+<div class="col-lg-12">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Transaction </h5>
+        </div>
+        <div class="ibox-content">
+        
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>type</th>
+                        <th>Amount </th>
+                        <th>Sender</th>
+                        <th>Comment</th>
+                        <th>Date </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="transactions in transactions">
+                        <td>{{transactions.type}}</td>
+                        <td>{{transactions.amount}}<small></td>
+                        <td>{{transactions.sendto}}</td>
+                        <td>{{transactions.comment}}
+                        <td>{{transactions.createdAt}}</td>
+                    </tr>
+                 
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>

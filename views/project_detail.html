@@ -1,0 +1,107 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Project detail</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+                <strong>Project detail</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row wrapper-content">
+    <section id="map">
+        <ng-map center="{{projectDetail.Coordinates}}" zoom="13" map-type-id="HYBRID"">
+            <marker position="{{projectDetail.Coordinates}}" title="Hello World!" animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
+        </ng-map>
+    </section>
+</div>
+<div class="row">
+    <div class="col-lg-4 wrapper">
+        <div class="wrapper wrapper-content animated fadeInUp">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <dl class="">
+                                <dt>Status:</dt>
+                                <dd><span class="label label-primary">{{projectDetail.Status}}</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <dl>
+                                <dt>{{ 'Title' | translate }}:</dt>
+                                <dd>{{projectDetail.Title}}</dd>
+                                <dt>Created by:</dt>
+                                <dd>{{projectDetail.PosterName}}</dd>
+                            </dl>
+                        </div>
+                    
+                    </div>
+                    <div class="row m-t-sm">
+                        <div class="col-lg-12">
+                            <div class="panel blank-panel ui-tab">
+                                <tabset>
+                                    <tab heading="Applicants" active="tab.active" class="dsads">
+                                        <div class="feed-activity-list">
+                                            <div class="feed-element" ng-repeat="applicantlist in applicantlist">
+                                                <a href="" class="pull-left">
+                                                    <img alt="image" class="img-circle" src="{{applicantlist.ApplicantPhotoUrl}}">
+                                                </a>
+                                                <div class="media-body ">
+                                                    <strong>{{applicantlist.ApplicantDisplayName}}</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </tab>
+                                </tabset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8 wrapper">
+        <div class="row wrapper wrapper-content project-manager">
+            <div class="row">
+                <h1>{{projectDetail.Title}}</h1>
+            </div>
+            <div class="row">
+                <p class="small">
+                    {{projectDetail.JobPostPrice}}
+                </p>
+            </div>
+            <div class="row">
+                <p class="small">
+                    {{projectDetail.Description}}
+                </p>
+            </div>
+            <div class="row">
+                <form role="form" ng-submit="submitApply()">
+                    <div id="applyjobInputPrice" class="form-group">
+                        <label>{{ 'Price' | translate }}</label>
+                        <input  ng-model="applyjob.Price" type="number" placeholder="0" value="0" class="form-control">
+                    </div>
+                    <div id="applyjobInputQuantity" class="form-group">
+                        <label>{{ 'Quantity' | translate }}</label>
+                        <input  ng-model="applyjob.Quantity" type="number" placeholder="0" value="0" class="form-control">
+                    </div>
+                    <div id="applyjobInputDescription" class="form-group">
+                        <textarea placeholder="your message" ng-model="applyjob.Description" class="form-control"></textarea> 
+                    </div>
+                    
+                    <div>
+                        <button id="submitApplyButton" class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong id="applyButton">Apply</strong></button>
+                       
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>

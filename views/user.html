@@ -1,0 +1,51 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Profile</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+                <strong>Profile</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-md-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Profile Detail</h5>
+                </div>
+                <div>
+                    <div class="ibox-content profile-content">
+                    <div class="row">
+                    <section id="map">
+                        <ng-map center="{{userDataInfo.lot[0]}},{{userDataInfo.lot[1]}}" zoom="5" on-click="changePlace($event)" map-type-id="HYBRID">
+                            <marker position="{{userDataInfo.lot[0]}},{{userDataInfo.lot[1]}}" title="Hello World!" on-dragend="changePlace($event)" animation="Animation.BOUNCE" animation="DROP" draggable="true"></marker>
+                        </ng-map>
+                    </section>
+                </div>
+
+                        <h5>
+                        Place:
+                        </h5>
+                        <p>{{userDataInfo.place}}</p>
+                        <h5>
+                        Ecode:
+                        </h5>
+                        <p> {{userDataInfo.email}}
+                        </p>
+                        <h5>
+                        About me
+                        </h5> {{userDataInfo.about}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Applicant list</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+                <strong>Applicant list</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content animated fadeInUp">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <div class="ibox-tools">
+                        <a href="#!/dashboards/create_jobpost" class="btn btn-primary btn-xs">Create new project</a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row m-b-sm m-t-sm">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                        </div>
+                    </div>
+                    <div class="row wrapper">
+                        <div class="row wrapper project-list">
+                            <div class="row project-feed" ng-repeat="projectApplicantList in projectApplicantList">
+                                <div class="col-lg-12">
+                                    <div class="col-lg-1">
+                                        <a href="#!/app/user?id={{projectApplicantList.Applicant}}"><img width="80px" src="{{projectApplicantList.ApplicantPhotoUrl}}"></a>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        
+                                        <strong>{{projectApplicantList.ApplicantDisplayName}}</strong><br>
+                                         <strong>Price: {{projectApplicantList.Price}}</strong>
+                                        
+                                        <br>
+                                        <strong>Quantity: {{projectApplicantList.Quantity}}</strong>
+                                        <br>
+                                        <strong>Description: {{projectApplicantList.Description}}</strong>
+                                        <br/>
+                                        <strong>Total: {{projectApplicantList.TotalPrice}}</strong><br>
+
+                                        <strong>{{projectApplicantList.humanTime}}</strong>
+
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-12">
+                                <div class="col-lg-2">
+                                       <button ng-click="addContact(projectApplicantList)" type="button" class="btn btn-primary"><i class="fa fa-user-plus"></i> contact</button>
+
+                                    </div>
+                                </div>
+                                <div class="row wrapper-content project-actions">
+                                    <div ng-switch="projectApplicantList.status">
+                                        <button ng-switch-when="approve" class="btn btn-primary btn-sm"><i class="fa fa-check">Approved</i></button>
+                                       <button class="btn btn-primary btn-sm" ng-click="approveOrder(projectApplicantList)" ng-switch-default "><i class="fa fa-pencil"></i> Accept </button>
+                                    </div>
+                                    </button>
+                                    
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

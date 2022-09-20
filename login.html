@@ -1,0 +1,166 @@
+By<!DOCTYPE html>
+<html ng-app="cabao">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title page-title></title>
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link id="loadBefore" href="css/style.css" rel="stylesheet">
+    <! -- † -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-11E5VB5T66"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-11E5VB5T66');
+    </script>
+</head>
+
+<body id="page-top" class="landing-page no-skin-config" ng-controller="LoginCtrl" class="gray-bg">
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Kwarta</a>
+                </div>
+                <div class="navbar-header navLogin pull-right">
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="webDescription">Our payment solution </h2><br>
+                    
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+
+                    <form  ng-submit="login()" name="signup_form" novalidate  class="m-t" role="form">
+                        <div class="form-group">
+                        	
+                            <input ng-model="loginEmail" name="loginEmail" class="span2 form-control" type="text" placeholder="Username">
+                            
+                        </div>
+                        
+
+                        <div class="form-group">
+
+                            <input ng-model="loginPassword" name="loginPassword" class="span2 form-control" type="password" placeholder="Password">
+                            <div class="m-t-xs">
+                                <small id="registerPasswordError" class="text-danger hide"></small>
+                                
+                            </div>
+                        </div>
+                     <div  class="m-t-xs">
+                            <small id="loginAlert" class="text-danger hide"></small>  
+                        </div>
+                       <button type="submit" class="btn btn-primary">Enter</button>
+                        <button class="btn btn-primary"><a href="register.html">Register</a></button>
+
+                       
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-3">
+  <!--
+                <li>
+                <a href="capital.html">
+                     Stocks
+                </a>
+                
+                </li>
+            -->
+            <li>
+                <a href="agreement.html">
+                     Terms
+                </a>
+                
+            </li>
+         
+            <li>
+                <a href="download.html">
+                    Download
+                </a>
+                
+            </li>
+            </div>
+           
+            <div class="col-md-3 text-right">
+              <!--
+                <li>
+                <a href="graph.html">
+                    Integration
+                </a>
+                
+            </li>
+-->
+            
+           
+                
+            </div>
+        </div>
+    </div>
+    <!-- jQuery and Bootstrap -->
+    <script src="js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- MetsiMenu -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- SlimScroll -->
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Peace JS -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/cabao.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <!-- Main Angular scripts-->
+    <script src="js/angular(1.6.4).min.js"></script>
+    <script src="js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="js/angular-translate/angular-translate.min.js"></script>
+    <script src="js/ui-router/angular-ui-router.min.js"></script>
+    <script src="js/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="js/plugins/angular-idle/angular-idle.js"></script>
+    <!--
+ You need to include this script on any page that has a Google Map.
+ When using Google Maps on your own site you MUST signup for your own API key at:
+ https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+ After your sign up replace the key in the URL below..
+-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/ngmap.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDE33V6odgF0W2PN2Efs4JZaY0zVd2tzco",
+    authDomain: "api-project-375080472585.firebaseapp.com",
+    databaseURL: "https://api-project-375080472585.firebaseio.com",
+    projectId: "api-project-375080472585",
+    storageBucket: "api-project-375080472585.appspot.com",
+    messagingSenderId: "375080472585"
+  };
+  firebase.initializeApp(config);
+</script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <!-- Anglar App Script -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+
+</html>
