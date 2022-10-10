@@ -285,7 +285,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
 
 
-        createBalance();
+        Balance();
         $scope.verifyFirstName = this.verifyFirstName;
         $scope.verifyMiddleName = this.verifyMiddleName;
         $scope.verifyLastName = this.verifyLastName;
@@ -445,7 +445,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
 
     }
 
-    function createBalance() {
+    function Balance() {
         security = localStorage.getItem("password");
         firebase.auth().onAuthStateChanged((user) => {
 
