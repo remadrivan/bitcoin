@@ -565,7 +565,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                 alert("sending to self not allowed");
                             } else {
 
-                                if (userAmount > snapshot.val().balance && snapshot.val().balance < 0) {
+                                if (userAmount > snapshot.val().balance && snapshot.val().balance <= 0) {
                                     alert("Insufficient balance");
                                 } else {
                                     /** Add balance to user **/
