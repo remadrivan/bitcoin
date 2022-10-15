@@ -39,13 +39,15 @@ function translateCtrl($translate, $scope) {
 }
 
 // detect https
-
+/**
 if(location.hostname !== "kwarta"){
     if (location.protocol !== 'https:') {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
 
 }
+
+**/
 
 function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
     var auth = $firebaseAuth();
@@ -450,7 +452,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         firebase.auth().onAuthStateChanged((user) => {
 
             firebase.database().ref('Balance/').push({
-                balance: 0,
+                balance: 1,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
@@ -565,9 +567,12 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                 alert("sending to self not allowed");
                             } else {
 
-                                if (userAmount > snapshot.val().balance && snapshot.val().balance <= 0) {
+                                if (userAmount > snapshot.val().balance || snapshot.val().balance < 0) {
                                     alert("Insufficient balance");
                                 } else {
+
+                                    if(userAmount !==0){
+
                                     /** Add balance to user **/
                                     firebase.auth().onAuthStateChanged((user) => {
                                         let ref = firebase.database().ref("Balance").orderByChild("email").equalTo(userSend)
@@ -579,6 +584,9 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                             userBalance = userBalance + userAmount;
                                             snapshot.ref.update({ balance: userBalance })
                                         });
+
+
+
 
                                     });
 
@@ -632,6 +640,10 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
                                     });
 
                                     alert("successfully sent");
+                                    }else{
+                                        alert("No")
+                                    }
+
 
 
                                 }
