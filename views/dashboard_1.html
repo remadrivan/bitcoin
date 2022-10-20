@@ -1,16 +1,13 @@
 <div class="row  border-bottom white-bg dashboard-header">
-   <div class="row>
-      <div class="input-group">	
-      
-   </div>
+
    <div class="row">
-    	<div class="col-lg-5">
-        <div class="ibox">
+    	<div class="col-lg-2">
+        <div>
            
-            <div class="ibox-content">
+            <div class="ibox">
                 <div class="row">
-                    <h2>Balance: {{balance}}</h1>
-                    <h3></h3>
+                    {{balance}}
+                    
                 </div>
                 <br>
                 <form class="form-horizontal" ng-submit="send(this)">
@@ -18,7 +15,7 @@
 
                     <div class="form-group">
 
-                        <div class="col-lg-10"><input type="text" placeholder="Username" autocorrect="off" autocapitalize="none" ng-model="userSendTo"  ng-change="usernameSendTo(this)" class="form-control"> <span class="help-block m-b-none">"{{UserName}}" Found.  </span>
+                        <div class="col-lg-10"><input type="text" placeholder="user" autocorrect="on" autocapitalize="none" ng-model="userSendTo"  ng-change="usernameSendTo(this)" class="form-control"> <span class="help-block m-b-none">"{{UserName}}" Found.  </span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -34,7 +31,7 @@
                     
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
-                            <button class="btn btn-sm btn-white" type="submit">Done</button>
+                            <button class="btn btn-sm btn-green" type="submit">Done</button>
                         </div>
                     </div>
                 </form>
