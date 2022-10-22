@@ -16,7 +16,7 @@ if(location.hostname !== key){
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
 
-}
+};
 
 
 
