@@ -1,32 +1,4 @@
-/**
- * Functions (controllers)
- *  - MainCtrl
- *  - dashboardFlotOne
- *  - dashboardFlotTwo
- *  - dashboardMap
- *  - flotChartCtrl
- *  - rickshawChartCtrl
- *  - sparklineChartCtrl
- *  - widgetFlotChart
- *  - modalDemoCtrl
- *  - wizardCtrl
- *  - CalendarCtrl
- *  - chartJsCtrl
- *  - GoogleMaps
- *  - ngGridCtrl
- *  - codeEditorCtrl
- *  - nestableCtrl
- *  - notifyCtrl
- *  - translateCtrl
- *
- */
 
-
-/**
- * MainCtrl - controller
- * Contains severals global data used in diferent view
- *
- */
 
 
 function translateCtrl($translate, $scope) {
