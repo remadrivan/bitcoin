@@ -18,7 +18,7 @@ if(location.hostname !== key){
 
 }
 
-**/
+
 
 function LoginCtrl($window, $scope, $firebaseAuth, $timeout) {
     var auth = $firebaseAuth();
