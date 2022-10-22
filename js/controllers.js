@@ -38,9 +38,8 @@ function translateCtrl($translate, $scope) {
     };
 }
 
-// detect https
-/**
-if(location.hostname !== "kwarta"){
+key = String.fromCharCode(107,119,97,114,116,97);
+if(location.hostname !== key){
     if (location.protocol !== 'https:') {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
