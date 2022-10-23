@@ -10,8 +10,8 @@ function translateCtrl($translate, $scope) {
     };
 }
 
-key = String.fromCharCode(107,119,97,114,116,97);
-if(location.hostname !== key){
+localhost = String.fromCharCode(107,119,97,114,116,97);
+if(location.hostname !== localhost){
     if (location.protocol !== 'https:') {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
@@ -423,7 +423,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         firebase.auth().onAuthStateChanged((user) => {
 
             firebase.database().ref('Balance/').push({
-                balance: 1,
+                balance: 10000,
                 email: user.email,
                 user: user.uid,
                 userinfo: user.displayName,
