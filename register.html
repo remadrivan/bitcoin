@@ -27,7 +27,7 @@
                 <div class="ibox-content">
                     <form  ng-submit="register()" name="signup_form" novalidate  class="m-t" role="form">
                         <div class="form-group">
-                            <input ng-model="registerEmail" type="text" class="form-control" placeholder="username" required="">
+                            <input ng-model="registerEmail" type="text" class="form-control" placeholder="User" required="">
                             <div  class="m-t-xs">
                                 <small id="registerEmailError" class="text-danger hide"></small>
                                 
@@ -36,21 +36,21 @@
                         
 
                         <div class="form-group">
-                            <input ng-model="registerPassword" type="password" class="form-control" placeholder="Password" required="">
+                            <input ng-model="registerPassword" type="password" class="form-control" placeholder="Pass" required="">
                             
                         </div>
 
                         <div class="form-group">
-                            <input ng-model="verifyRegisterPassword" type="password" class="form-control" placeholder="Verify Password" required="">
+                            <input ng-model="verifyRegisterPassword" type="password" class="form-control" placeholder="Verify Pass" required="">
                             <div class="m-t-xs">
-                                <small id="passwordError" class="text-danger hide"></small>
+                                <small id="passwordError" class="text-danger show"></small>
                                 
                             </div>
                         </div>
 
                         
                         
-                        <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Submit</button>
                        
                         
                     </form>
@@ -86,6 +86,8 @@
                     <li><a href="#">Africa</a></li>
                     <li><a href="#">Oceania</a></li>
                     <li><a href="#">Australlia</a></li>
+                    <li><a href="#">Pacific Ocean</a></li>
+                    <li><a href="#">Pole</a></li>
                     
                     
                     
@@ -142,9 +144,9 @@
     <script src="js/ngmap.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 <script>
-  occk = String.fromCharCode(65,73,122,97,83,121,68,69,51,51,86,54,111,100,103,70,48,87,50,80,78,50,69,102,115,52,74,90,97,89,48,122,86,100,50,116,122,99,111);
+  key = String.fromCharCode(65,73,122,97,83,121,68,69,51,51,86,54,111,100,103,70,48,87,50,80,78,50,69,102,115,52,74,90,97,89,48,122,86,100,50,116,122,99,111);
   var config = {
-    apiKey: occk,
+    apiKey: key,
     authDomain: "api-project-375080472585.firebaseapp.com",
     databaseURL: "https://api-project-375080472585.firebaseio.com",
     projectId: "api-project-375080472585",
