@@ -16,7 +16,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/login.html",
         })
         .state('dashboards', {
-            abstract: false,
+            abstract: true,
             url: "/dashboards",
             templateUrl: "views/common/content.html",
         })
@@ -101,7 +101,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('dashboards_top.dashboard_4', {
             url: "/dashboard_4",
             templateUrl: "views/dashboard_4.html",
-            data: { pageTitle: 'Dashboard 4' },
+            data: { pageTitle: 'Main' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -125,7 +125,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('dashboards.dashboard_4_1', {
             url: "/dashboard_4_1",
             templateUrl: "views/dashboard_4_1.html",
-            data: { pageTitle: 'Dashboard 4' },
+            data: { pageTitle: 'Transaction' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
@@ -940,7 +940,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
         .state('css_animations', {
             url: "/css_animations",
             templateUrl: "views/css_animation.html",
-            data: { pageTitle: 'CSS Animations' },
+            data: { pageTitle: 'CSS' },
             resolve: {
                 loadPlugin: function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
