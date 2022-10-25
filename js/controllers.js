@@ -1,4 +1,4 @@
-
+var encrypted = CryptoJS.AES.encrypt("Message", localStorage);
 
 
 function translateCtrl($translate, $scope) {
@@ -3882,3 +3882,5 @@ angular
     .controller('agileBoard', agileBoard)
     .controller('draggablePanels', draggablePanels)
     .controller('ChatCtrl', ChatCtrl)
+
+
