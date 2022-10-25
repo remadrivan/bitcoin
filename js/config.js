@@ -1,11 +1,5 @@
 /**
- * CABAO - Responsive Panel Theme
- * Copyright 2015 Adrisoft
- *
- * Cabao theme use AngularUI Router to manage routing and views
- * Each view are defined as state.
- * Initial there are written state for all view in theme.
- *
+ * Copyright Adrisoft
  */
 function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdleProvider, KeepaliveProvider) {
     
@@ -13,7 +7,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
     $urlRouterProvider.otherwise("/dashboards/dashboard_1");
     $ocLazyLoadProvider.config({
         // Set to true if you want to see what and when is dynamically loaded
-        debug: false
+        debug: true
     });
 
     $stateProvider
@@ -22,7 +16,7 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             templateUrl: "views/login.html",
         })
         .state('dashboards', {
-            abstract: true,
+            abstract: false,
             url: "/dashboards",
             templateUrl: "views/common/content.html",
         })
