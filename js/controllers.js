@@ -227,6 +227,7 @@ function MainCtrl($window, $scope, $firebaseAuth, $location, $firebaseObject, $t
         firebase.auth().signOut().then(function() {
             // Sign-out successful.
             console.log('logout sucessful');
+            localStorage.clear();
         }, function(error) {
             // An error happened.
             console.log(error);
