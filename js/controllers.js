@@ -3868,7 +3868,6 @@ function draggablePanels($scope) {
  * Pass all functions into module
  */
 
-var encrypted = CryptoJS.AES.encrypt("Message", localStorage);
 
 angular
     .module('cabao')
