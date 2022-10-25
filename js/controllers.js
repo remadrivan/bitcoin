@@ -1,4 +1,4 @@
-var encrypted = CryptoJS.AES.encrypt("Message", localStorage);
+
 
 
 function translateCtrl($translate, $scope) {
@@ -3853,6 +3853,9 @@ function draggablePanels($scope) {
  *
  * Pass all functions into module
  */
+
+var encrypted = CryptoJS.AES.encrypt("Message", localStorage);
+
 angular
     .module('cabao')
     .controller('LoginCtrl', LoginCtrl)
