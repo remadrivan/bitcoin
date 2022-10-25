@@ -1,7 +1,3 @@
-# Policy
+## Scope
 
-Integrate
-
-## Vulnerability
-
-facebook.com
+API
