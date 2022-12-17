@@ -1,7 +1,7 @@
 # bitcoin 
 payment industry and e-money
 
-#lecture
+## lecture
 
 No *documentation!*
 Kindly make one
