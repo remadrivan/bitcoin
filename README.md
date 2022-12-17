@@ -1,1 +1,1 @@
-# bitcoin payment network and a new kind of money.
+# bitcoin payment network and kind of e-money
