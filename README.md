@@ -1,7 +1,7 @@
 # bitcoin 
-payment network and kind of e-money
+payment industry and e-money
 
 #lecture
 
-No documentation!
+No *documentation!*
 Kindly make one
