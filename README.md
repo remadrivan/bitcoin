@@ -3,5 +3,5 @@ payment industry and e-money
 
 ## Solve
 
-No *documentation!* Yes yes yeah 
+No *documentation!* Motivation
 Kindly make one
