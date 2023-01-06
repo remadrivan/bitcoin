@@ -1,5 +1,5 @@
 # bitcoin 
-payment industry and e-money
+payment industry and electronic money
 
 ## Solve
 
